@@ -8,7 +8,7 @@ The process  when bying an object is like below:
 
 Once you choose the product that exists in the database ,a new order is created  and stored in **$prouductOBJ ** then serialized and that serialized object gets inserted in the table **user_items**.
 
-But since SQL can't save NULL bytes and since we do have protected attributes in Order class  ; when trying to store data into the DB there will be an interesting replace of **‘\x00\x2a\x00’ **(chr(0).*.chr(0))with **'\0\0\0’**(the ‘\x00\x2a\x00’ is a prefix added to all the protected variables ).
+But since SQL can't save NULL bytes and since we do have protected attributes in Order class  ; when trying to store data into the DB there will be an interesting replace of **‘\x00\x2a\x00’**(chr(0).*.chr(0))with **'\0\0\0’**(the ‘\x00\x2a\x00’ is a prefix added to all the protected variables ).
 
 
 
